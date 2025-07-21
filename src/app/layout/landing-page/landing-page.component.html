@@ -1,0 +1,95 @@
+<div class="bg-[color:var(--theme-background)] text-[color:var(--theme-text-primary)] font-serif">
+  <!-- Image Slider -->
+  <section class="relative overflow-hidden h-72 md:h-96">
+    <div class="w-full h-full">
+      <img [src]="sliderImages[currentSlide]" alt="Slide Image" class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out">
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-[color:var(--theme-primary)] text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('assets/hero-bg.jpg');"></div>
+    <div class="relative z-10 max-w-4xl mx-auto animate-fadeIn">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Welcome to Maharashtra Cultural & Development Center Trust</h1>
+      <p class="text-xl mb-4">Celebrating culture, cinema, and community service since 2002.</p>
+      <h2 class="text-3xl mt-8">महाराष्ट्र सांस्कृतिक व विकास केंद्र ट्रस्ट में आपका स्वागत है</h2>
+      <p class="text-lg">2002 से संस्कृति, सिनेमा और समाजसेवा को समर्पित।</p>
+    </div>
+  </section>
+
+  <!-- Impact Snapshot -->
+  <section class="py-20 px-6 bg-[color:var(--theme-surface)] text-[color:var(--theme-text-primary)]">
+    <h2 class="text-4xl font-bold text-center mb-14 animate-fadeUp">हमारी उपलब्धियाँ</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
+      <!-- Cards -->
+      <div class="transition-transform hover:scale-105">
+        <img src="assets/icons/film.svg" alt="Films" class="w-16 h-16 mx-auto mb-4">
+        <p class="font-bold text-xl">20+ Films & Serials</p>
+        <p>२०+ फ़िल्में व धारावाहिक</p>
+      </div>
+      <div class="transition-transform hover:scale-105">
+        <img src="assets/icons/music.svg" alt="Music" class="w-16 h-16 mx-auto mb-4">
+        <p class="font-bold text-xl">10+ Music Albums</p>
+        <p>१०+ संगीत एलबम</p>
+      </div>
+      <div class="transition-transform hover:scale-105">
+        <img src="assets/icons/artist.svg" alt="Artists" class="w-16 h-16 mx-auto mb-4">
+        <p class="font-bold text-xl">500+ Artists Supported</p>
+        <p>५००+ कलाकारों को सहयोग</p>
+      </div>
+      <div class="transition-transform hover:scale-105">
+        <img src="assets/icons/village.svg" alt="Villages" class="w-16 h-16 mx-auto mb-4">
+        <p class="font-bold text-xl">100+ Villages Reached</p>
+        <p>१००+ गांवों तक पहुंच</p>
+      </div>
+      <div class="transition-transform hover:scale-105">
+        <img src="assets/icons/health.svg" alt="Social Work" class="w-16 h-16 mx-auto mb-4">
+        <p class="font-bold text-xl">200+ Social Programs</p>
+        <p>२००+ सामाजिक उपक्रम</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission -->
+  <section class="py-20 px-6 bg-[color:var(--theme-background)]">
+    <div class="max-w-5xl mx-auto text-center animate-fadeUp">
+      <h2 class="text-4xl font-bold mb-6">Our Mission & Vision</h2>
+      <p class="text-lg leading-relaxed mb-4">We aim to foster cultural heritage through arts, cinema, music and social upliftment. Our vision is to make arts accessible to every corner of Maharashtra and empower communities through awareness and action.</p>
+      <img src="assets/mission.jpg" alt="Our Mission" class="mx-auto rounded-lg shadow-lg mt-6">
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 px-6 bg-[color:var(--theme-primary-dark)] text-white text-center animate-fadeInUp">
+    <h2 class="text-4xl font-bold mb-4">Join Our Journey</h2>
+    <p class="mb-2 text-lg">Join our journey of transformation. Support our work in culture, entertainment & social impact.</p>
+    <p class="mb-6">परिवर्तन की इस यात्रा में हमारा साथ दें। संस्कृति, मनोरंजन और समाजसेवा में योगदान करें।</p>
+    <button class="bg-white text-[color:var(--theme-primary)] font-bold px-8 py-3 rounded hover:bg-[color:var(--theme-gold-light)] transition-colors duration-300">
+      Support Now
+    </button>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 px-6 bg-[color:var(--theme-surface)] text-[color:var(--theme-text-primary)]">
+    <h2 class="text-4xl font-bold text-center mb-10">अनुभव साझा</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp">
+        <p class="italic">“MCDC gave me a platform to perform and grow. Forever grateful!”</p>
+        <p class="font-bold mt-4">– Local Actor</p>
+      </div>
+      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp delay-100">
+        <p class="italic">“The film on Phule changed my perspective. Amazing work!”</p>
+        <p class="font-bold mt-4">– Educator</p>
+      </div>
+      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp delay-200">
+        <p class="italic">“We received free medicines and blessings through their rural camp.”</p>
+        <p class="font-bold mt-4">– Villager</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[color:var(--theme-primary-dark)] text-white py-8 text-center">
+    <p>&copy; 2025 Maharashtra Cultural & Development Center Trust. All rights reserved.</p>
+  </footer>
+</div>

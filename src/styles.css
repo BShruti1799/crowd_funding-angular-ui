@@ -1,0 +1,44 @@
+/* ✅ 1. Google Fonts — always first */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* ✅ 2. Tailwind base styles */
+@import "tailwindcss";
+
+/* ✅ 3. Define your custom theme in @layer */
+@layer base {
+  :root {
+    /* 🌸 Primary Colors (Pinks) */
+    --theme-primary: #ff69b4;         /* Hot Pink */
+    --theme-primary-dark: #d94f9f;    /* Deep Pink */
+
+    /* 🌸 Secondary and Accents */
+    --theme-navy: #b03060;            /* Maroon Pink */
+    --theme-royal-blue: #ff85c1;      /* Soft Light Pink */
+    --theme-emerald: #ffb6c1;         /* Light Pink */
+    --theme-red: #ff69b4;             /* Matching Bright Pink */
+    --theme-pink: #ffc0cb;            /* Classic Light Pink */
+
+    /* 🌸 Background + Surface */
+    --theme-background: #fff0f5;      /* Lavender Blush */
+    --theme-surface: #ffe4e1;         /* Misty Rose */
+    --theme-border: #ffc0cb;          /* Light Border Pink */
+
+    /* 🌸 Text Colors */
+    --theme-text-primary: #4b0036;    /* Deep Purple Pink */
+    --theme-text-accent: #800040;     /* Darker Accent Text */
+
+    /* 🎗 Legacy/Brand Colors (Re-Tinted for Pink) */
+    --theme-black: #2b001b;           /* Very Dark Burgundy */
+    --theme-gold: #ffb6c1;            /* Light Pink */
+    --theme-gold-light: #ffd1dc;      /* Pale Pink */
+    --theme-cream: #fff0f5;           /* Lavender Blush */
+    --theme-slate: #800040;           /* Bold Pink Accent */
+
+    /* Aliases */
+    --color-black: var(--theme-black);
+    --color-gold: var(--theme-gold);
+    --color-gold-light: var(--theme-gold-light);
+    --color-cream: var(--theme-cream);
+    --color-slate: var(--theme-slate);
+  }
+}
