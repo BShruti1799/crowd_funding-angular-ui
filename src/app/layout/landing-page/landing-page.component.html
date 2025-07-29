@@ -1,95 +1,282 @@
-<div class="bg-[color:var(--theme-background)] text-[color:var(--theme-text-primary)] font-serif">
-  <!-- Image Slider -->
-  <section class="relative overflow-hidden h-72 md:h-96">
-    <div class="w-full h-full">
-      <img [src]="sliderImages[currentSlide]" alt="Slide Image" class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out">
+<br><br><br><br>
+
+
+
+<section class="hero-slider" [style.backgroundImage]="'url(' + currentBackground + ')'">
+  <div class="overlay"></div>
+  <div class="banner-content">
+    <h1>Welcome to Maharashtra Cultural & Development Center Trust</h1>
+    <p>Celebrating culture, cinema, and community service since 2002.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<div class="bt-stats-strip">
+  <div class="bt-stat-item">
+    <i class="fas fa-film bt-stat-icon"></i>
+    <div class="bt-stat-text">
+      <div class="bt-stat-number">20+</div>
+      <div class="bt-stat-label">Films & Serials</div>
     </div>
-  </section>
-
-  <!-- Hero Section -->
-  <section class="text-center py-20 px-6 bg-[color:var(--theme-primary)] text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('assets/hero-bg.jpg');"></div>
-    <div class="relative z-10 max-w-4xl mx-auto animate-fadeIn">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">Welcome to Maharashtra Cultural & Development Center Trust</h1>
-      <p class="text-xl mb-4">Celebrating culture, cinema, and community service since 2002.</p>
-      <h2 class="text-3xl mt-8">महाराष्ट्र सांस्कृतिक व विकास केंद्र ट्रस्ट में आपका स्वागत है</h2>
-      <p class="text-lg">2002 से संस्कृति, सिनेमा और समाजसेवा को समर्पित।</p>
+  </div>
+  <div class="bt-stat-item">
+    <i class="fas fa-music bt-stat-icon"></i>
+    <div class="bt-stat-text">
+      <div class="bt-stat-number">10+</div>
+      <div class="bt-stat-label">Music Albums</div>
     </div>
-  </section>
-
-  <!-- Impact Snapshot -->
-  <section class="py-20 px-6 bg-[color:var(--theme-surface)] text-[color:var(--theme-text-primary)]">
-    <h2 class="text-4xl font-bold text-center mb-14 animate-fadeUp">हमारी उपलब्धियाँ</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
-      <!-- Cards -->
-      <div class="transition-transform hover:scale-105">
-        <img src="assets/icons/film.svg" alt="Films" class="w-16 h-16 mx-auto mb-4">
-        <p class="font-bold text-xl">20+ Films & Serials</p>
-        <p>२०+ फ़िल्में व धारावाहिक</p>
-      </div>
-      <div class="transition-transform hover:scale-105">
-        <img src="assets/icons/music.svg" alt="Music" class="w-16 h-16 mx-auto mb-4">
-        <p class="font-bold text-xl">10+ Music Albums</p>
-        <p>१०+ संगीत एलबम</p>
-      </div>
-      <div class="transition-transform hover:scale-105">
-        <img src="assets/icons/artist.svg" alt="Artists" class="w-16 h-16 mx-auto mb-4">
-        <p class="font-bold text-xl">500+ Artists Supported</p>
-        <p>५००+ कलाकारों को सहयोग</p>
-      </div>
-      <div class="transition-transform hover:scale-105">
-        <img src="assets/icons/village.svg" alt="Villages" class="w-16 h-16 mx-auto mb-4">
-        <p class="font-bold text-xl">100+ Villages Reached</p>
-        <p>१००+ गांवों तक पहुंच</p>
-      </div>
-      <div class="transition-transform hover:scale-105">
-        <img src="assets/icons/health.svg" alt="Social Work" class="w-16 h-16 mx-auto mb-4">
-        <p class="font-bold text-xl">200+ Social Programs</p>
-        <p>२००+ सामाजिक उपक्रम</p>
-      </div>
+  </div>
+  <div class="bt-stat-item">
+    <i class="fas fa-users bt-stat-icon"></i>
+    <div class="bt-stat-text">
+      <div class="bt-stat-number">500+</div>
+      <div class="bt-stat-label">Artists Supported</div>
     </div>
-  </section>
-
-  <!-- Our Mission -->
-  <section class="py-20 px-6 bg-[color:var(--theme-background)]">
-    <div class="max-w-5xl mx-auto text-center animate-fadeUp">
-      <h2 class="text-4xl font-bold mb-6">Our Mission & Vision</h2>
-      <p class="text-lg leading-relaxed mb-4">We aim to foster cultural heritage through arts, cinema, music and social upliftment. Our vision is to make arts accessible to every corner of Maharashtra and empower communities through awareness and action.</p>
-      <img src="assets/mission.jpg" alt="Our Mission" class="mx-auto rounded-lg shadow-lg mt-6">
+  </div>
+  <div class="bt-stat-item">
+    <i class="fas fa-tractor bt-stat-icon"></i>
+    <div class="bt-stat-text">
+      <div class="bt-stat-number">100+</div>
+      <div class="bt-stat-label">Villages Reached</div>
     </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-20 px-6 bg-[color:var(--theme-primary-dark)] text-white text-center animate-fadeInUp">
-    <h2 class="text-4xl font-bold mb-4">Join Our Journey</h2>
-    <p class="mb-2 text-lg">Join our journey of transformation. Support our work in culture, entertainment & social impact.</p>
-    <p class="mb-6">परिवर्तन की इस यात्रा में हमारा साथ दें। संस्कृति, मनोरंजन और समाजसेवा में योगदान करें।</p>
-    <button class="bg-white text-[color:var(--theme-primary)] font-bold px-8 py-3 rounded hover:bg-[color:var(--theme-gold-light)] transition-colors duration-300">
-      Support Now
-    </button>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-20 px-6 bg-[color:var(--theme-surface)] text-[color:var(--theme-text-primary)]">
-    <h2 class="text-4xl font-bold text-center mb-10">अनुभव साझा</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp">
-        <p class="italic">“MCDC gave me a platform to perform and grow. Forever grateful!”</p>
-        <p class="font-bold mt-4">– Local Actor</p>
-      </div>
-      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp delay-100">
-        <p class="italic">“The film on Phule changed my perspective. Amazing work!”</p>
-        <p class="font-bold mt-4">– Educator</p>
-      </div>
-      <div class="bg-[color:var(--theme-background)] p-6 rounded-xl shadow-md animate-fadeUp delay-200">
-        <p class="italic">“We received free medicines and blessings through their rural camp.”</p>
-        <p class="font-bold mt-4">– Villager</p>
-      </div>
+  </div>
+  <div class="bt-stat-item">
+    <i class="fas fa-hand-holding-medical bt-stat-icon"></i>
+    <div class="bt-stat-text">
+      <div class="bt-stat-number">200+</div>
+      <div class="bt-stat-label">Social Programs</div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[color:var(--theme-primary-dark)] text-white py-8 text-center">
-    <p>&copy; 2025 Maharashtra Cultural & Development Center Trust. All rights reserved.</p>
-  </footer>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="bt-class-card">
+  <h2 class="bt-card-heading">Our Core Features</h2>
+  <div class="bt-bubbles-bg">
+    <div class="bt-cards-container">
+      <div class="bt-card">
+        <div class="bt-card-icon"><i class="fas fa-magic"></i></div>
+        <h3 class="bt-card-title">Easy to Use</h3>
+        <p class="bt-card-text">Simple interfaces that everyone understands instantly.</p>
+      </div>
+      <div class="bt-card">
+        <div class="bt-card-icon"><i class="fas fa-bolt"></i></div>
+        <h3 class="bt-card-title">Fast & Smooth</h3>
+        <p class="bt-card-text">Lightning-fast performance with no lag or delay.</p>
+      </div>
+      <div class="bt-card">
+        <div class="bt-card-icon"><i class="fas fa-lock"></i></div>
+        <h3 class="bt-card-title">Secure</h3>
+        <p class="bt-card-text">Industry-standard encryption and data safety.</p>
+      </div>
+      <div class="bt-card">
+        <div class="bt-card-icon"><i class="fas fa-cogs"></i></div>
+        <h3 class="bt-card-title">Customizable</h3>
+        <p class="bt-card-text">Fully flexible tools to suit your needs perfectly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="slider1test">
+  <div class="header">
+    <i class="fas fa-quote-left"></i>
+    What People Say
+  </div>
+  <div class="slider-wrapper" aria-label="Testimonials slider">
+    <button class="nav-btn nav-prev" aria-label="Previous testimonial" (click)="prev()"
+      [disabled]="currentIndex === 0">&#10094;</button>
+
+    <div class="slider" [style.transform]="'translateX(' + translateX + 'px)'">
+      <article class="slide" *ngFor="let testi of testimonials; let i = index"
+        [ngClass]="{ 'focused': i === currentIndex }">
+
+        <p class="quote">{{ testi.quote }}</p>
+        <div class="author-info">
+          <img [src]="testi.photo" [alt]="testi.name" class="author-photo" />
+          <div class="author-details">
+            <span class="author-name">{{ testi.name }}</span>
+            <span class="author-role">{{ testi.role }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <button class="nav-btn nav-next" aria-label="Next testimonial" (click)="next()"
+      [disabled]="currentIndex === testimonials.length - 1">&#10095;</button>
+  </div>
+</section>
+
+
+
+<section class="donation-header">
+  <div class="donation-header-content">
+    <h2>Support Our <span class="gradient-text">Mission</span></h2>
+    <p>Your generous contribution helps us preserve culture, create art, and transform communities across
+      Maharashtra and beyond.</p>
+  </div>
+</section>
+
+
+<section class="donation-section">
+  <div class="donation-container">
+
+    <!-- Bank Transfer -->
+    <div class="donation-card">
+      <div>
+        <div class="icon-circle bank-icon"><i class="fas fa-building-columns"></i></div>
+        <h3>Bank Transfer</h3>
+        <div class="detail-row">Account Name: <span>MCDC Trust <button class="copy-btn"
+              onclick="copyText('MCDC Trust')"><i class="fas fa-copy"></i></button></span></div>
+        <div class="detail-row">Account No: <span>1234567890123456 <button class="copy-btn"
+              onclick="copyText('1234567890123456')"><i class="fas fa-copy"></i></button></span></div>
+        <div class="detail-row">IFSC Code: <span>SBIN0001234 <button class="copy-btn"
+              onclick="copyText('SBIN0001234')"><i class="fas fa-copy"></i></button></span></div>
+        <div class="detail-row">Bank: <span>State Bank of India <button class="copy-btn"
+              onclick="copyText('State Bank of India')"><i class="fas fa-copy"></i></button></span>
+        </div>
+        <div class="detail-row">Branch: <span>Mumbai Central <button class="copy-btn"
+              onclick="copyText('Mumbai Central')"><i class="fas fa-copy"></i></button></span></div>
+      </div>
+    </div>
+
+    <!-- UPI Payment -->
+    <div class="donation-card">
+      <div>
+        <div class="icon-circle upi-icon"><i class="fas fa-qrcode"></i></div>
+        <h3>UPI Payment</h3>
+        <div class="qr-box"><i class="fas fa-qrcode"></i></div>
+        <div class="upi-id">mcdcpaytm <button class="copy-btn" onclick="copyText('mcdc@paytm')"><i
+              class="fas fa-copy"></i></button></div>
+        <div class="amount-buttons">
+          <button class="amount-btn">₹500</button>
+          <button class="amount-btn">₹1000</button>
+          <button class="amount-btn">₹2000</button>
+          <button class="amount-btn">₹5000</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Online Donation -->
+    <div class="donation-card">
+      <div>
+        <div class="icon-circle online-icon"><i class="fas fa-credit-card"></i></div>
+        <h3>Online Donation</h3>
+        <p class="subtext">Secure online donations via credit card, debit card, or net banking.</p>
+        <button class="donate-btn donate-500">Donate ₹500</button>
+        <button class="donate-btn donate-1000">Donate ₹1000</button>
+        <button class="donate-btn donate-2000">Donate ₹2000</button>
+        <button class="donate-btn custom-amount">Custom Amount</button>
+        <p class="subtext">All donations are 80G tax deductible.<br />Receipt will be sent via email.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Get In Touch</h2>
+    <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">
+      Have questions or want to get involved? We'd love to hear from you
+    </p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <strong>Address</strong><br>
+            Mumbai, Maharashtra, India
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div>
+            <strong>Phone</strong><br>
+            +91 98765 43210
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <strong>Email</strong><br>
+            infomaharashtraculture.org
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" class="form-input" placeholder="Message Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

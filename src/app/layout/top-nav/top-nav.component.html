@@ -1,34 +1,16 @@
-<nav
-  class="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl backdrop-saturate-100 bg-[color:var(--theme-black)]/100 text-white shadow-md">
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo"><img src="assets/MCDC.png"></div>
 
-  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-    <!-- Custom Logo -->
-   
-       <img src="assets/logo.jpeg" alt="" style="height:5rem;">
-    
-  
-
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
-      <a href="/" class="hover:text-[var(--theme-gold-light)]">Home</a>
-      <!-- <a href="/shop" class="hover:text-[var(--theme-gold-light)]">Shop</a> -->
-      <a href="/about-us" class="hover:text-[var(--theme-gold-light)]">About</a>
-      <a href="/contact-us" class="hover:text-[var(--theme-gold-light)]">Contact</a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button (click)="toggleMenu()" class="md:hidden text-white cursor-pointer">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
+    <button class="navbar-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+      &#9776;
     </button>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div *ngIf="isMenuOpen" class="md:hidden bg-[var(--theme-black)] text-white text-center p-4 space-y-4">
-    <a href="/" class="block hover:text-[var(--theme-gold-light)]">Home</a>
-    <!-- <a href="/shop" class="block hover:text-[var(--theme-gold-light)]">Shop</a> -->
-    <a href="/about-us" class="block hover:text-[var(--theme-gold-light)]">About</a>
-    <a href="/contact-us" class="block hover:text-[var(--theme-gold-light)]">Contact</a>
+    <nav class="navbar-links" [class.open]="menuOpen">
+      <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+      <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+    </nav>
   </div>
-</nav>
+</header>

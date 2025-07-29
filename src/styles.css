@@ -7,38 +7,34 @@
 /* ✅ 3. Define your custom theme in @layer */
 @layer base {
   :root {
-    /* 🌸 Primary Colors (Pinks) */
-    --theme-primary: #ff69b4;         /* Hot Pink */
-    --theme-primary-dark: #d94f9f;    /* Deep Pink */
+            /* Purple Theme Colors */
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --primary-light: #a78bfa;
+            --secondary: #e879f9;
+            --accent: #06b6d4;
 
-    /* 🌸 Secondary and Accents */
-    --theme-navy: #b03060;            /* Maroon Pink */
-    --theme-royal-blue: #ff85c1;      /* Soft Light Pink */
-    --theme-emerald: #ffb6c1;         /* Light Pink */
-    --theme-red: #ff69b4;             /* Matching Bright Pink */
-    --theme-pink: #ffc0cb;            /* Classic Light Pink */
+            /* Neutral Colors */
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
 
-    /* 🌸 Background + Surface */
-    --theme-background: #fff0f5;      /* Lavender Blush */
-    --theme-surface: #ffe4e1;         /* Misty Rose */
-    --theme-border: #ffc0cb;          /* Light Border Pink */
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient-hero: linear-gradient(rgba(124, 58, 237, 0.7), rgba(232, 121, 249, 0.3));
+            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
 
-    /* 🌸 Text Colors */
-    --theme-text-primary: #4b0036;    /* Deep Purple Pink */
-    --theme-text-accent: #800040;     /* Darker Accent Text */
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
-    /* 🎗 Legacy/Brand Colors (Re-Tinted for Pink) */
-    --theme-black: #2b001b;           /* Very Dark Burgundy */
-    --theme-gold: #ffb6c1;            /* Light Pink */
-    --theme-gold-light: #ffd1dc;      /* Pale Pink */
-    --theme-cream: #fff0f5;           /* Lavender Blush */
-    --theme-slate: #800040;           /* Bold Pink Accent */
-
-    /* Aliases */
-    --color-black: var(--theme-black);
-    --color-gold: var(--theme-gold);
-    --color-gold-light: var(--theme-gold-light);
-    --color-cream: var(--theme-cream);
-    --color-slate: var(--theme-slate);
-  }
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 }
