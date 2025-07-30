@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "thee-furnivo-life": {
+    "crowd_funding-angular-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/thee-furnivo-life",
+            "outputPath": "dist/crowd_funding-angular-ui",
             "baseHref": "/",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -22,8 +22,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-                "src/assets"
-
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -35,13 +34,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "10mb",
+                  "maximumError": "20MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10mb",
+                  "maximumError": "20MB"
                 }
               ],
               "outputHashing": "all"
@@ -58,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "thee-furnivo-life:build:production"
+              "buildTarget": "crowd_funding-angular-ui:build:production"
             },
             "development": {
-              "buildTarget": "thee-furnivo-life:build:development"
+              "buildTarget": "crowd_funding-angular-ui:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -9,7 +9,7 @@ import { LayoutModule } from './layout/layout.module';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // title = 'thee-furnivo-life';
+  // title = 'crowd_funding-angular-ui';
 
   themes = ['light', 'dark', 'blue', 'green', 'red'];
 

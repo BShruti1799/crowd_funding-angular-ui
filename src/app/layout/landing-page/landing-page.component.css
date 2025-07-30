@@ -1028,7 +1028,7 @@ body {
   font-size: 2.4rem;
   margin-bottom: 20px;
   color: #6b21a8;
-  font-weight:bold
+  font-weight: bold
 }
 
 .slider1test .slider-wrapper {
@@ -1183,15 +1183,25 @@ body {
   text-align: center;
   font-size: 2rem;
   color: #3c1a6e;
-  margin-bottom: 40px;
+  margin-bottom: 2%;
+}
+
+.bt-class-card .bt-card-subheading {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #3e3a47;
+  margin-bottom: 15px;
 }
 
 /* Bubble Background */
 .bt-bubbles-bg::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(circle, rgba(200, 150, 255, 0.2) 10%, transparent 10%);
   background-size: 80px 80px;
   animation: floatBubbles 60s linear infinite;
@@ -1203,6 +1213,7 @@ body {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 800px 800px;
   }
@@ -1282,7 +1293,7 @@ body {
   transition: all 0.4s ease;
   color: #e0e7ff;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .bt-stat-item:hover {
@@ -1418,7 +1429,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(101, 67, 33, 0.6); /* brownish semi-transparent overlay */
+  background: rgba(101, 67, 33, 0.6);
+  /* brownish semi-transparent overlay */
   z-index: 1;
 }
 
@@ -1476,3 +1488,168 @@ body {
 
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero Section Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* 🟣 Purple Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(270, 70%, 50%, 0.4);
+  /* Purple tone */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-button {
+  display: inline-block;
+  background: hsl(270, 70%, 45%);
+  /* Purple button */
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-button:hover {
+  background: hsl(270, 70%, 35%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+}

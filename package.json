@@ -4,9 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build --base-href=https://bshruti1799.github.io/crowd_funding-angular-ui/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/crowd_funding-angular-ui/browser"
   },
   "private": true,
   "dependencies": {

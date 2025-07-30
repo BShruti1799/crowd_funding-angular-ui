@@ -19,41 +19,31 @@ export class LandingPageComponent implements OnInit {
   currentBackground = this.backgroundImages[0];
 
 
+  currentSlide = 0;
+  slides!: NodeListOf<Element>;
 
 
+testimonials = [
+  {
+    quote: "MCDC gave me a platform to perform and grow. From local skits to cultural shows, I’ve found my voice and my stage. Forever grateful!",
+    name: "Local Actor",
+    role: "Theatre Performer",
+    icon: "fas fa-theater-masks"
+  },
+  {
+    quote: "The film on Phule changed my perspective. It was powerful, enlightening, and beautifully presented. Truly an eye-opener for educators like me.",
+    name: "Educator",
+    role: "Social Science Teacher",
+    icon: "fas fa-chalkboard-teacher"
+  },
+  {
+    quote: "We received free medicines and blessings through their rural camp. It brought relief to many families and showed real compassion.",
+    name: "Villager",
+    role: "Beneficiary from Outreach Program",
+    icon: "fas fa-hand-holding-heart"
+  }
+];
 
-  testimonials = [
-    {
-      quote: "This service transformed our business! The team was incredibly responsive and the results exceeded all expectations. Highly recommend!",
-      name: "Emma Johnson",
-      role: "CEO, BrightFuture Inc.",
-      photo: "assets/slider/download.jpg"
-    },
-    {
-      quote: "I was amazed by the professionalism and attention to detail. They truly care about their clients and deliver outstanding results every time.",
-      name: "James Smith",
-      role: "Marketing Director, CreativeWave",
-      photo: "assets/slider/download.jpg"
-    },
-    {
-      quote: "Exceptional experience from start to finish. The team’s expertise helped us streamline operations and boost revenue within months.",
-      name: "Sophia Lee",
-      role: "Operations Manager, TechSolutions",
-      photo: "assets/slider/download.jpg"
-    },
-    {
-      quote: "Professional, reliable, and results-driven! Their support and knowledge made all the difference for our project.",
-      name: "Michael Brown",
-      role: "Product Manager, InnovateX",
-      photo: "assets/slider/download.jpg"
-    },
-    {
-      quote: "The collaboration was seamless, and the results speak for themselves. I highly recommend this team to anyone looking for quality and dedication.",
-      name: "Linda Davis",
-      role: "Founder, Bright Ideas",
-      photo: "assets/slider/download.jpg"
-    }
-  ];
 
   // In your component.ts
   cards = [
@@ -120,5 +110,29 @@ export class LandingPageComponent implements OnInit {
   @HostListener('window:resize')
   onResize() {
     this.updateSliderPosition();
+  }
+
+  ngAfterViewInit(): void {
+    this.slides = document.querySelectorAll('.hero-slide');
+
+    const showSlide = (index: number) => {
+      this.slides.forEach((slide, i) => {
+        (slide as HTMLElement).classList.toggle('active', i === index);
+      });
+    };
+
+    const nextSlide = () => {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+      showSlide(this.currentSlide);
+    };
+
+    showSlide(0);
+    setInterval(nextSlide, 4000);
+  }
+
+  handleDonateClick() {
+    alert('Donate Now clicked! Redirect to donation page.');
+    console.log('Donate Now clicked');
+    // Optionally, navigate to donation page
   }
 }

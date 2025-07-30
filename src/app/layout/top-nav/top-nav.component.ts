@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TopNavComponent {
   menuOpen = false;
+  selectedLanguage = 'en';
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -15,5 +16,11 @@ export class TopNavComponent {
 
   closeMenu() {
     this.menuOpen = false;
+  }
+
+  changeLanguage(event: any) {
+    const lang = event.target.value;
+    console.log("Language changed to:", lang);
+    // Optionally: store language in localStorage or use a translation service
   }
 }

@@ -62,4 +62,4 @@ For more information on using the Angular CLI, including detailed command refere
 
 ng build
 
-npx angular-cli-ghpages --dir=dist/thee-furnivo-life/browser --no-silent --cname="theefurnivo.life"
+npx angular-cli-ghpages --dir=dist/crowd_funding-angular-ui/browser --no-silent --cname="theefurnivo.life"

@@ -1,14 +1,38 @@
-<br><br><br><br>
 
+<!-- hero-section.component.html -->
+<section class="hero-section">
+  <div class="hero-slider">
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
+    </div>
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2089&q=80')">
+    </div>
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
+    </div>
+    <div class="hero-slide"
+      style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
+    </div>
+  </div>
 
+  <div class="hero-overlay"></div>
 
-<section class="hero-slider" [style.backgroundImage]="'url(' + currentBackground + ')'">
-  <div class="overlay"></div>
-  <div class="banner-content">
-    <h1>Welcome to Maharashtra Cultural & Development Center Trust</h1>
-    <p>Celebrating culture, cinema, and community service since 2002.</p>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Together We Can Make a Difference
+    </h1>
+    <p class="hero-subtitle">
+      Join thousands of changemakers supporting meaningful causes around the world. Every donation creates ripples of
+      hope and transforms communities.
+    </p>
+    <button class="hero-button" (click)="handleDonateClick()">
+      Donate Now
+    </button>
   </div>
 </section>
+
+
 
 
 
@@ -68,32 +92,40 @@
 
 
 <div class="bt-class-card">
-  <h2 class="bt-card-heading">Our Core Features</h2>
+  <h2 class="bt-card-heading">Call to Action</h2>
+  <p class="bt-card-subheading gradient-text">
+    Join our journey of transformation. Support our work in culture, entertainment & social impact.
+  </p>
   <div class="bt-bubbles-bg">
     <div class="bt-cards-container">
       <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-magic"></i></div>
-        <h3 class="bt-card-title">Easy to Use</h3>
-        <p class="bt-card-text">Simple interfaces that everyone understands instantly.</p>
+        <div class="bt-card-icon"><i class="fas fa-landmark"></i></div>
+        <h3 class="bt-card-title">Preserve Culture</h3>
+        <p class="bt-card-text">Help revive traditional art, music, and storytelling by supporting local artisans and
+          folk communities.</p>
       </div>
       <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-bolt"></i></div>
-        <h3 class="bt-card-title">Fast & Smooth</h3>
-        <p class="bt-card-text">Lightning-fast performance with no lag or delay.</p>
+        <div class="bt-card-icon"><i class="fas fa-users"></i></div>
+        <h3 class="bt-card-title">Empower Creators</h3>
+        <p class="bt-card-text">Back emerging artists and filmmakers from underrepresented communities to amplify
+          diverse voices.</p>
       </div>
       <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-lock"></i></div>
-        <h3 class="bt-card-title">Secure</h3>
-        <p class="bt-card-text">Industry-standard encryption and data safety.</p>
+        <div class="bt-card-icon"><i class="fas fa-video"></i></div>
+        <h3 class="bt-card-title">Drive Change</h3>
+        <p class="bt-card-text">Use documentaries, plays, and media campaigns to highlight key social issues and inspire
+          action.</p>
       </div>
       <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-cogs"></i></div>
-        <h3 class="bt-card-title">Customizable</h3>
-        <p class="bt-card-text">Fully flexible tools to suit your needs perfectly.</p>
+        <div class="bt-card-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="bt-card-title">Support Innovation</h3>
+        <p class="bt-card-text">Fund creative tech-driven experiences like VR, AR, and digital exhibits that educate and
+          engage the public.</p>
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -113,7 +145,7 @@
 
         <p class="quote">{{ testi.quote }}</p>
         <div class="author-info">
-          <img [src]="testi.photo" [alt]="testi.name" class="author-photo" />
+          <i [class]="testi.icon" style="font-size:3rem"></i>
           <div class="author-details">
             <span class="author-name">{{ testi.name }}</span>
             <span class="author-role">{{ testi.role }}</span>

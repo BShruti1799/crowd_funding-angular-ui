@@ -6,13 +6,14 @@ import { MainComponent } from './main/main.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [ FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent],
   imports: [
-    CommonModule, RouterModule, RouterOutlet
+    CommonModule, RouterModule, RouterOutlet, FormsModule
   ],
   exports: [FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent]
 })
