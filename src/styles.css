@@ -4,37 +4,233 @@
 /* ✅ 2. Tailwind base styles */
 @import "tailwindcss";
 
-/* ✅ 3. Define your custom theme in @layer */
-@layer base {
+:root {
+  /* Core Brand Colors */
+  --brand-purple: hsl(316, 61%, 59%);
+  --brand-purple-light: hsl(312, 50%, 40%);
+  --brand-purple-dark: hsl(301, 100%, 20%);
+
+  --brand-yellow: hsl(48, 100%, 50%);
+  --brand-yellow-dark: hsl(45, 100%, 45%);
+
+  /* Background Colors */
+  --background: hsl(0, 0%, 100%);
+  --background-secondary: hsl(280, 15%, 97%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+
+  /* Hero Gradient */
+  --hero-gradient: linear-gradient(135deg, hsl(280, 70%, 25%) 0%, hsl(320, 60%, 35%) 50%, hsl(280, 60%, 45%) 100%);
+  --hero-overlay: hsla(280, 60%, 25%, 0.8);
+
+  /* Card and Surface Colors */
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --card-shadow: hsla(280, 40%, 20%, 0.1);
+
+  /* Primary Colors (Purple Theme) */
+  --primary: hsl(280, 60%, 35%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-hover: hsl(280, 70%, 25%);
+
+  /* Secondary Colors (Yellow Accent) */
+  --secondary: hsl(48, 100%, 50%);
+  --secondary-foreground: hsl(280, 60%, 25%);
+  --secondary-hover: hsl(45, 100%, 45%);
+
+  /* Text Colors */
+  --muted: hsl(280, 10%, 95%);
+  --muted-foreground: hsl(280, 15%, 45%);
+
+  --accent: hsl(280, 15%, 96%);
+  --accent-foreground: hsl(280, 60%, 25%);
+
+  /* Status Colors */
+  --success: hsl(142, 71%, 45%);
+  --success-foreground: hsl(0, 0%, 100%);
+
+  /* UI Elements */
+  --border: hsl(280, 15%, 90%);
+  --input: hsl(280, 15%, 95%);
+
+  /* Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Shadows */
+  --shadow-elegant: 0 10px 30px -10px hsla(280, 40%, 20%, 0.3);
+  --shadow-glow: 0 0 40px hsla(280, 60%, 50%, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-            /* Purple Theme Colors */
-            --primary: #7c3aed;
-            --primary-dark: #5b21b6;
-            --primary-light: #a78bfa;
-            --secondary: #e879f9;
-            --accent: #06b6d4;
+    --background: hsl(280, 60%, 5%);
+    --background-secondary: hsl(280, 40%, 8%);
+    --foreground: hsl(280, 15%, 95%);
+    --hero-gradient: linear-gradient(135deg, hsl(280, 80%, 15%) 0%, hsl(320, 70%, 25%) 50%, hsl(280, 70%, 35%) 100%);
+    --hero-overlay: hsla(280, 80%, 15%, 0.9);
+    --card: hsl(280, 40%, 8%);
+    --card-foreground: hsl(280, 15%, 95%);
+    --card-shadow: hsla(280, 80%, 10%, 0.5);
+    --primary: hsl(280, 60%, 55%);
+    --primary-foreground: hsl(280, 60%, 5%);
+    --primary-hover: hsl(280, 70%, 65%);
+    --secondary: hsl(48, 100%, 60%);
+    --secondary-foreground: hsl(280, 60%, 10%);
+    --secondary-hover: hsl(48, 100%, 70%);
+    --muted: hsl(280, 30%, 15%);
+    --muted-foreground: hsl(280, 20%, 65%);
+    --accent: hsl(280, 30%, 12%);
+    --accent-foreground: hsl(280, 60%, 70%);
+    --border: hsl(280, 30%, 18%);
+    --input: hsl(280, 30%, 15%);
+    --shadow-elegant: 0 10px 30px -10px hsla(280, 80%, 10%, 0.5);
+    --shadow-glow: 0 0 40px hsla(280, 60%, 50%, 0.3);
+  }
+}
 
-            /* Neutral Colors */
-            --background: #ffffff;
-            --surface: #f8fafc;
-            --card: #ffffff;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
-            --border: #e2e8f0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-            /* Gradients */
-            --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
-            --gradient-hero: linear-gradient(rgba(124, 58, 237, 0.7), rgba(232, 121, 249, 0.3));
-            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+html {
+  scroll-behavior: smooth;
+}
 
-            /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-            /* Transitions */
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gradient-hero {
+  background: var(--hero-gradient);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-yellow-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
 }

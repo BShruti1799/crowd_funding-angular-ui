@@ -1,174 +1,77 @@
-/* PURPLE THEME with CLOUD EFFECT */
-.navbar {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  
-}
-
-.navbar-cloud-bg {
-  background: rgba(155, 89, 182, 0.2);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border-bottom: 2px solid rgba(155, 89, 182, 0.3);
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  width: 100%;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.navbar-logo img {
-  height: 50px;
-}
-
-.navbar-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #6c3483;
-  cursor: pointer;
-}
-
-.navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-links a {
-  color: #4a235a;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.navbar-links a:hover {
-  background-color: rgba(155, 89, 182, 0.15);
-}
-
-/* Social icons */
-.navbar-social {
-  display: flex;
-  gap: 12px;
-}
-
-.navbar-social a {
-  width: 34px;
-  height: 34px;
-  background-color: #8e44ad;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: transform 0.3s, box-shadow 0.3s;
-  animation: pulse 2s infinite;
-}
-
-.navbar-social a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(155, 89, 182, 0.6);
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(1);
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--brand-purple-dark);
+    /* backdrop-filter: blur(10px); */
+    /* border-bottom: 1px solid var(--border); */
   }
 
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-/* Language dropdown */
-.language-select {
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: 1px solid #bb8fce;
-  background-color: white;
-  font-size: 0.95rem;
-  color: #4a235a;
-  appearance: none;
-  margin-left: 10px;
-  transition: border 0.3s;
-}
-
-.language-select:hover,
-.language-select:focus {
-  border-color: #8e44ad;
-  outline: none;
-}
-
-/* Donate Now button */
-.donate-button {
-  background: linear-gradient(to right, #9b59b6, #8e44ad);
-  color: white;
-  padding: 10px 22px;
-  border-radius: 50px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 12px;
-  box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.donate-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(155, 89, 182, 0.4);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    display: none;
-    padding-top: 10px;
-  }
-
-  .navbar-links.open {
+  .header-content {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
   }
 
-  .navbar-links a,
-  .navbar-social,
-  .language-select,
-  .donate-button {
-    width: 100%;
-    text-align: right;
-    padding-right: 15px;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
-  .navbar-social {
-    justify-content: flex-end;
-    padding-right: 15px;
+  .logoImg {
+    height: 5rem;
+    width: 6rem
   }
 
-  .language-select {
-    margin: 8px 0 0 0;
+  .logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand-purple), var(--brand-purple-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-yellow);
+    font-weight: bold;
+    font-size: 1.25rem;
   }
 
-  .donate-button {
-    margin-top: 10px;
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
   }
-}
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav a {
+    color: var(--brand-yellow);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  .nav a:hover {
+    color: white;
+  }
+
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }

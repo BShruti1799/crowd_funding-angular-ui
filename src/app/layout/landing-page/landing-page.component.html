@@ -1,314 +1,768 @@
 
-<!-- hero-section.component.html -->
-<section class="hero-section">
-  <div class="hero-slider">
-    <div class="hero-slide"
-      style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-    </div>
-    <div class="hero-slide"
-      style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2089&q=80')">
-    </div>
-    <div class="hero-slide"
-      style="background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-    </div>
-    <div class="hero-slide"
-      style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-    </div>
-  </div>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1 class="hero-title">
-      Together We Can Make a Difference
-    </h1>
-    <p class="hero-subtitle">
-      Join thousands of changemakers supporting meaningful causes around the world. Every donation creates ripples of
-      hope and transforms communities.
-    </p>
-    <button class="hero-button" (click)="handleDonateClick()">
-      Donate Now
-    </button>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="bt-stats-strip">
-  <div class="bt-stat-item">
-    <i class="fas fa-film bt-stat-icon"></i>
-    <div class="bt-stat-text">
-      <div class="bt-stat-number">20+</div>
-      <div class="bt-stat-label">Films & Serials</div>
-    </div>
-  </div>
-  <div class="bt-stat-item">
-    <i class="fas fa-music bt-stat-icon"></i>
-    <div class="bt-stat-text">
-      <div class="bt-stat-number">10+</div>
-      <div class="bt-stat-label">Music Albums</div>
-    </div>
-  </div>
-  <div class="bt-stat-item">
-    <i class="fas fa-users bt-stat-icon"></i>
-    <div class="bt-stat-text">
-      <div class="bt-stat-number">500+</div>
-      <div class="bt-stat-label">Artists Supported</div>
-    </div>
-  </div>
-  <div class="bt-stat-item">
-    <i class="fas fa-tractor bt-stat-icon"></i>
-    <div class="bt-stat-text">
-      <div class="bt-stat-number">100+</div>
-      <div class="bt-stat-label">Villages Reached</div>
-    </div>
-  </div>
-  <div class="bt-stat-item">
-    <i class="fas fa-hand-holding-medical bt-stat-icon"></i>
-    <div class="bt-stat-text">
-      <div class="bt-stat-number">200+</div>
-      <div class="bt-stat-label">Social Programs</div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="bt-class-card">
-  <h2 class="bt-card-heading">Call to Action</h2>
-  <p class="bt-card-subheading gradient-text">
-    Join our journey of transformation. Support our work in culture, entertainment & social impact.
-  </p>
-  <div class="bt-bubbles-bg">
-    <div class="bt-cards-container">
-      <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-landmark"></i></div>
-        <h3 class="bt-card-title">Preserve Culture</h3>
-        <p class="bt-card-text">Help revive traditional art, music, and storytelling by supporting local artisans and
-          folk communities.</p>
-      </div>
-      <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-users"></i></div>
-        <h3 class="bt-card-title">Empower Creators</h3>
-        <p class="bt-card-text">Back emerging artists and filmmakers from underrepresented communities to amplify
-          diverse voices.</p>
-      </div>
-      <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-video"></i></div>
-        <h3 class="bt-card-title">Drive Change</h3>
-        <p class="bt-card-text">Use documentaries, plays, and media campaigns to highlight key social issues and inspire
-          action.</p>
-      </div>
-      <div class="bt-card">
-        <div class="bt-card-icon"><i class="fas fa-lightbulb"></i></div>
-        <h3 class="bt-card-title">Support Innovation</h3>
-        <p class="bt-card-text">Fund creative tech-driven experiences like VR, AR, and digital exhibits that educate and
-          engage the public.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<section class="slider1test">
-  <div class="header">
-    <i class="fas fa-quote-left"></i>
-    What People Say
-  </div>
-  <div class="slider-wrapper" aria-label="Testimonials slider">
-    <button class="nav-btn nav-prev" aria-label="Previous testimonial" (click)="prev()"
-      [disabled]="currentIndex === 0">&#10094;</button>
-
-    <div class="slider" [style.transform]="'translateX(' + translateX + 'px)'">
-      <article class="slide" *ngFor="let testi of testimonials; let i = index"
-        [ngClass]="{ 'focused': i === currentIndex }">
-
-        <p class="quote">{{ testi.quote }}</p>
-        <div class="author-info">
-          <i [class]="testi.icon" style="font-size:3rem"></i>
-          <div class="author-details">
-            <span class="author-name">{{ testi.name }}</span>
-            <span class="author-role">{{ testi.role }}</span>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1 class="hero-title">
+                    Together We Can<br>
+                    <span class="text-gradient">Make a Difference</span><br>
+                    Through <span class="text-gradient">Culture</span><br>
+                    and <span class="text-gradient">Entertainment</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Join thousands of changemakers supporting meaningful causes around the world. 
+                    Through storytelling, music, cinema, and grassroots programs, we connect 
+                    communities, empower creators, and preserve rich cultural traditions.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#donate" class="btn btn-secondary btn-lg animate-slide-up">Donate Now</a>
+                    <a href="#about" class="btn btn-outline btn-lg animate-slide-up">Learn More</a>
+                </div>
+            </div>
         </div>
-      </article>
-    </div>
 
-    <button class="nav-btn nav-next" aria-label="Next testimonial" (click)="next()"
-      [disabled]="currentIndex === testimonials.length - 1">&#10095;</button>
-  </div>
-</section>
-
-
-
-<section class="donation-header">
-  <div class="donation-header-content">
-    <h2>Support Our <span class="gradient-text">Mission</span></h2>
-    <p>Your generous contribution helps us preserve culture, create art, and transform communities across
-      Maharashtra and beyond.</p>
-  </div>
-</section>
-
-
-<section class="donation-section">
-  <div class="donation-container">
-
-    <!-- Bank Transfer -->
-    <div class="donation-card">
-      <div>
-        <div class="icon-circle bank-icon"><i class="fas fa-building-columns"></i></div>
-        <h3>Bank Transfer</h3>
-        <div class="detail-row">Account Name: <span>MCDC Trust <button class="copy-btn"
-              onclick="copyText('MCDC Trust')"><i class="fas fa-copy"></i></button></span></div>
-        <div class="detail-row">Account No: <span>1234567890123456 <button class="copy-btn"
-              onclick="copyText('1234567890123456')"><i class="fas fa-copy"></i></button></span></div>
-        <div class="detail-row">IFSC Code: <span>SBIN0001234 <button class="copy-btn"
-              onclick="copyText('SBIN0001234')"><i class="fas fa-copy"></i></button></span></div>
-        <div class="detail-row">Bank: <span>State Bank of India <button class="copy-btn"
-              onclick="copyText('State Bank of India')"><i class="fas fa-copy"></i></button></span>
+        <div class="scroll-indicator animate-bounce">
+            <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="detail-row">Branch: <span>Mumbai Central <button class="copy-btn"
-              onclick="copyText('Mumbai Central')"><i class="fas fa-copy"></i></button></span></div>
-      </div>
-    </div>
+    </section>
 
-    <!-- UPI Payment -->
-    <div class="donation-card">
-      <div>
-        <div class="icon-circle upi-icon"><i class="fas fa-qrcode"></i></div>
-        <h3>UPI Payment</h3>
-        <div class="qr-box"><i class="fas fa-qrcode"></i></div>
-        <div class="upi-id">mcdcpaytm <button class="copy-btn" onclick="copyText('mcdc@paytm')"><i
-              class="fas fa-copy"></i></button></div>
-        <div class="amount-buttons">
-          <button class="amount-btn">₹500</button>
-          <button class="amount-btn">₹1000</button>
-          <button class="amount-btn">₹2000</button>
-          <button class="amount-btn">₹5000</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Stats Section -->
+    <section class="section section-secondary">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">20+</div>
+                    <h3 class="card-title">Films & Serials</h3>
+                    <p class="card-description">Our films touch lives, document culture, and promote social change across rural and urban landscapes.</p>
+                </div>
+                
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">10+</div>
+                    <h3 class="card-title">Music Albums</h3>
+                    <p class="card-description">From traditional melodies to contemporary fusion, we capture voices that tell timeless stories.</p>
+                </div>
+                
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">500+</div>
+                    <h3 class="card-title">Artists Supported</h3>
+                    <p class="card-description">Empowering talent across acting, music, direction, and cultural documentation.</p>
+                </div>
+                
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">100+</div>
+                    <h3 class="card-title">Villages Reached</h3>
+                    <p class="card-description">Spreading awareness, creativity, and cultural programs to transform rural regions.</p>
+                </div>
+                
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">200+</div>
+                    <h3 class="card-title">Social Programs</h3>
+                    <p class="card-description">Bringing education, health, and awareness through creative outreach and campaigns.</p>
+                </div>
+                
+                <div class="card text-center animate-fade-in">
+                    <div class="card-number">150+</div>
+                    <h3 class="card-title">Schools Engaged</h3>
+                    <p class="card-description">Using documentaries, plays, and music to foster cultural values among youth.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- Online Donation -->
-    <div class="donation-card">
-      <div>
-        <div class="icon-circle online-icon"><i class="fas fa-credit-card"></i></div>
-        <h3>Online Donation</h3>
-        <p class="subtext">Secure online donations via credit card, debit card, or net banking.</p>
-        <button class="donate-btn donate-500">Donate ₹500</button>
-        <button class="donate-btn donate-1000">Donate ₹1000</button>
-        <button class="donate-btn donate-2000">Donate ₹2000</button>
-        <button class="donate-btn custom-amount">Custom Amount</button>
-        <p class="subtext">All donations are 80G tax deductible.<br />Receipt will be sent via email.</p>
-      </div>
-    </div>
+    <!-- Philosophy Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Philosophy</p>
+                <h2 class="section-title">
+                    Culture Meets <span class="text-gradient">Social Impact</span>
+                </h2>
+                <p class="section-description">
+                    We believe entertainment is more than just stories—it's a catalyst for social change, 
+                    identity, and empowerment. Through film, music, and community initiatives, MCDC bridges 
+                    tradition with innovation to ignite meaningful conversations.
+                </p>
+            </div>
 
-  </div>
-</section>
+            <div class="grid grid-cols-2" style="gap: 3rem; align-items: center;">
+                <div class="philosophy-points">
+                    <div class="card animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="card-title">Preserve Heritage</h3>
+                        <p class="card-description">Documenting and celebrating cultural traditions</p>
+                    </div>
+                    
+                    <div class="card animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="card-title">Empower Voices</h3>
+                        <p class="card-description">Amplifying marginalized community stories</p>
+                    </div>
+                    
+                    <div class="card animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="card-title">Drive Change</h3>
+                        <p class="card-description">Using art as a vehicle for social transformation</p>
+                    </div>
+                    
+                    <div class="card animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="card-title">Foster Innovation</h3>
+                        <p class="card-description">Blending traditional and modern storytelling</p>
+                    </div>
+                </div>
 
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="section contact">
-  <div class="container">
-    <h2 class="section-title" style="color: white;">Get In Touch</h2>
-    <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">
-      Have questions or want to get involved? We'd love to hear from you
-    </p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <strong>Address</strong><br>
-            Mumbai, Maharashtra, India
-          </div>
+                <div class="philosophy-image animate-fade-in">
+                    <img src="assets/guitarImage.png" alt="Cultural equipment and instruments">
+                </div>
+            </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div>
-            <strong>Phone</strong><br>
-            +91 98765 43210
-          </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section gradient-hero cta-section">
+        <div class="container cta-content">
+            <div class="section-header">
+                <p class="section-subtitle" style="color: var(--brand-yellow);">Call to Action</p>
+                <h2 class="section-title" style="color: white;">
+                    Join our journey of <span class="text-gradient">transformation</span>
+                </h2>
+                <p class="section-description" style="color: rgba(255, 255, 255, 0.9);">
+                    Be part of a movement that shapes culture, empowers communities, and drives 
+                    meaningful change through the power of storytelling.
+                </p>
+            </div>
+
+            <div class="cta-points">
+                <div class="cta-point animate-fade-in">
+                    <div class="cta-point-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600;">Preserve Culture</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Support indigenous art forms and local storytelling through film, dance, and folk performances.</p>
+                </div>
+                
+                <div class="cta-point animate-fade-in">
+                    <div class="cta-point-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600;">Empower Creators</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">We help filmmakers and artists from marginalized communities amplify their voices through professional platforms.</p>
+                </div>
+                
+                <div class="cta-point animate-fade-in">
+                    <div class="cta-point-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600;">Drive Change</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Films like Phule, musical events, and cultural forums are used to challenge stereotypes and raise awareness.</p>
+                </div>
+                
+                <div class="cta-point animate-fade-in">
+                    <div class="cta-point-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600;">Support Innovation</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">MCDC explores digital experiences like VR documentaries, virtual concerts, and interactive education tools.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#contact" class="btn btn-secondary btn-lg animate-slide-up">Get Involved Today</a>
+            </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <strong>Email</strong><br>
-            infomaharashtraculture.org
-          </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="services" class="section section-secondary">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Featured Work</p>
+                <h2 class="section-title">
+                    Our Spotlight <span class="text-gradient">Initiatives</span>
+                </h2>
+                <p class="section-description">
+                    Discover the projects that are making waves in communities and touching 
+                    hearts across Maharashtra and beyond.
+                </p>
+            </div>
+
+            <div class="featured-grid">
+                <div class="featured-card animate-fade-in">
+                    <div class="featured-image">
+                        <img src="assets/slider/card1.jpg" alt="Phule: A Visionary's Tale">
+                        <div class="featured-category">Documentary Film</div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Phule: A Visionary's Tale</h3>
+                        <p class="card-description">A cinematic journey that sheds light on the legacy of Jyotirao Phule, blending drama with social critique.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem; color: var(--primary); border-color: var(--primary);">
+                            Learn More <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="featured-card animate-fade-in">
+                    <div class="featured-image">
+                        <img src="assets/slider/card2.jpg" alt="Sounds of the Soil">
+                        <div class="featured-category">Music Album</div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Sounds of the Soil</h3>
+                        <p class="card-description">A music anthology celebrating Maharashtra's folk rhythms fused with modern production.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem; color: var(--primary); border-color: var(--primary);">
+                            Learn More <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="featured-card animate-fade-in">
+                    <div class="featured-image">
+                        <img src="assets/slider/card3.jpg" alt="Stage for All">
+                        <div class="featured-category">Educational Theater</div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Stage for All</h3>
+                        <p class="card-description">Bringing theatre to rural schools—one performance at a time—to educate, engage, and inspire.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem; color: var(--primary); border-color: var(--primary);">
+                            Learn More <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="social-links">
-          <a href="#" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Testimonials</p>
+                <h2 class="section-title">
+                    What People <span class="text-gradient">Say</span>
+                </h2>
+                <p class="section-description">
+                    Hear from the communities, educators, and artists whose lives have been 
+                    touched by our work.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <div class="testimonial-card animate-fade-in">
+                    <div class="testimonial-quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "We see in their films the potential to transform perspectives and unlock potential. They bridge art, society, and empowerment like no other organization."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Educator</div>
+                        <div class="testimonial-role">Secondary School Teacher</div>
+                        <div class="testimonial-location">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.25rem;"></i>
+                            Mumbai
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-fade-in">
+                    <div class="testimonial-quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "MCDC's work in our village brought stories to life. The mobile cinema changed how our children see the world and their place in it."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Village Leader</div>
+                        <div class="testimonial-role">Community Representative</div>
+                        <div class="testimonial-location">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.25rem;"></i>
+                            Pune District
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-fade-in">
+                    <div class="testimonial-quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Their music albums capture the soul of our culture while making it accessible to younger generations. It's preservation and innovation combined."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Folk Artist</div>
+                        <div class="testimonial-role">Traditional Musician</div>
+                        <div class="testimonial-location">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.25rem;"></i>
+                            Nashik
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="contact-form">
-        <h3>Send us a Message</h3>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="your.email@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" id="subject" class="form-input" placeholder="Message Subject" required>
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" class="form-textarea" placeholder="Your message here..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section section-secondary">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Impact</p>
+                <h2 class="section-title">
+                    The Power of <span class="text-gradient">Visual Storytelling</span>
+                </h2>
+                <p class="section-description">
+                    Stories have always been at the heart of how we understand the world. At MCDC, 
+                    we use film and music not only as art but as tools for advocacy, inclusion, and 
+                    transformation. From mobile film screenings in villages to training workshops for 
+                    aspiring creators—our initiatives reach where others don't.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2" style="gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                <div class="animate-fade-in">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Why Stories Matter:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                            <div style="width: 0.5rem; height: 0.5rem; background: var(--primary); border-radius: 50%; margin-top: 0.5rem; margin-right: 1rem; flex-shrink: 0;"></div>
+                            <span style="color: var(--muted-foreground);">Bridge cultural divides and build understanding</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                            <div style="width: 0.5rem; height: 0.5rem; background: var(--primary); border-radius: 50%; margin-top: 0.5rem; margin-right: 1rem; flex-shrink: 0;"></div>
+                            <span style="color: var(--muted-foreground);">Preserve traditional knowledge for future generations</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                            <div style="width: 0.5rem; height: 0.5rem; background: var(--primary); border-radius: 50%; margin-top: 0.5rem; margin-right: 1rem; flex-shrink: 0;"></div>
+                            <span style="color: var(--muted-foreground);">Amplify voices of marginalized communities</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                            <div style="width: 0.5rem; height: 0.5rem; background: var(--primary); border-radius: 50%; margin-top: 0.5rem; margin-right: 1rem; flex-shrink: 0;"></div>
+                            <span style="color: var(--muted-foreground);">Create emotional connections that drive action</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-2" style="gap: 1.5rem;">
+                    <div class="card text-center animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="card-number" style="font-size: 2rem;">50+</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Mobile Screenings</h4>
+                        <p style="font-size: 0.875rem; color: var(--primary-foreground);">Bringing cinema to remote villages where theaters don't exist</p>
+                    </div>
+                    
+                    <div class="card text-center animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-number" style="font-size: 2rem;">10K+</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Lives Touched</h4>
+                        <p style="font-size: 0.875rem; color: var(--primary-foreground);">Stories that resonate and create lasting impact</p>
+                    </div>
+                    
+                    <div class="card text-center animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-number" style="font-size: 2rem;">25+</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Creator Workshops</h4>
+                        <p style="font-size: 0.875rem; color: var(--primary-foreground);">Training the next generation of storytellers</p>
+                    </div>
+                    
+                    <div class="card text-center animate-fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="card-number" style="font-size: 2rem;">100+</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Social Campaigns</h4>
+                        <p style="font-size: 0.875rem; color: var(--primary-foreground);">Using media to drive awareness and change</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">What's Next</p>
+                <h2 class="section-title">
+                    Upcoming Events & <span class="text-gradient">Releases</span>
+                </h2>
+                <p class="section-description">
+                    Stay updated with our latest initiatives, screenings, and opportunities to get 
+                    involved in our cultural movement.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <div class="card animate-fade-in">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; background: rgba(var(--success), 0.1); color: var(--success);">Ongoing</span>
+                        <div class="card-icon" style="margin: 0;">
+                            <i class="fas fa-film"></i>
+                        </div>
+                    </div>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.5rem;">Community Screening</p>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">Indie Film Screening Tour</h3>
+                    <p style="color: var(--primary-foreground); margin-bottom: 1rem;">Bringing socially impactful films to community halls across 15 villages.</p>
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i>
+                            Aug–Oct
+                        </div>
+                        <div style="display: flex; align-items: center; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
+                            15 Villages across Maharashtra
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="width: 100%; color: var(--primary); border-color: var(--primary);">Learn More</a>
+                </div>
+                
+                <div class="card animate-fade-in">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; background: rgba(var(--brand-yellow), 0.1); color: var(--brand-yellow-dark);">Coming Soon</span>
+                        <div class="card-icon" style="margin: 0;">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.5rem;">Album Launch</p>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">Music Release – 'Jagar 2.0'</h3>
+                    <p style="color: var(--primary-foreground); margin-bottom: 1rem;">A follow-up to our successful folk-electronic album drops this September.</p>
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i>
+                            September
+                        </div>
+                        <div style="display: flex; align-items: center; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
+                            Digital & Physical Release
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="width: 100%; color: var(--primary); border-color: var(--primary);">Learn More</a>
+                </div>
+                
+                <div class="card animate-fade-in">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                        <span style="padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; background: rgba(var(--primary), 0.1); color: var(--primary);">Open</span>
+                        <div class="card-icon" style="margin: 0;">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.5rem;">Competition</p>
+                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">Short Film Contest</h3>
+                    <p style="color: var(--primary-foreground); margin-bottom: 1rem;">Emerging creators can submit 5-15 min shorts on themes of heritage, equity, or rural stories.</p>
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i>
+                            Open Submissions
+                        </div>
+                        <div style="display: flex; align-items: center; font-size: 0.875rem; color: var(--primary-foreground);">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
+                            Online Platform
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Submit Entry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="section section-secondary">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Support Our <span class="text-gradient">Mission</span>
+                </h2>
+                <p class="section-description">
+                    Your generous contribution helps us preserve culture, empower artists, and 
+                    transform communities across Maharashtra and beyond.
+                </p>
+            </div>
+
+            <div class="donation-grid">
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Current Campaign</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.125rem; font-weight: 600; color: var(--primary);">Goal: ₹10,00,000</span>
+                            <span style="font-size: 1.125rem; font-weight: 600; color: var(--success);">75% complete</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <p style="font-size: 1.5rem; font-weight: bold; margin-top: 0.5rem;">₹7,50,000 raised</p>
+                    </div>
+                    
+                    <p style="color: var(--primary-foreground); margin-bottom: 1.5rem;">
+                        Help us reach our goal to launch 5 new community programs this year.
+                    </p>
+
+                    <div class="donation-amounts">
+                        <button class="amount-btn">₹500</button>
+                        <button class="amount-btn">₹1000</button>
+                        <button class="amount-btn">₹2500</button>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="width: 100%; padding: 1rem;">Donate Custom Amount</a>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Where Your Money Goes</h3>
+                    
+                    <div>
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-color" style="background: var(--primary);"></div>
+                                <span style="font-weight: 500;">Production</span>
+                            </div>
+                            <span class="budget-percentage">40%</span>
+                        </div>
+                        
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-color" style="background: var(--secondary);"></div>
+                                <span style="font-weight: 500;">Education Outreach</span>
+                            </div>
+                            <span class="budget-percentage">30%</span>
+                        </div>
+                        
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-color" style="background: var(--success);"></div>
+                                <span style="font-weight: 500;">Artist Support</span>
+                            </div>
+                            <span class="budget-percentage">20%</span>
+                        </div>
+                        
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-color" style="background: var(--primary-foreground);"></div>
+                                <span style="font-weight: 500;">Administration</span>
+                            </div>
+                            <span class="budget-percentage">10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="font-size: 1.5rem; font-weight: bold; text-align: center; margin-bottom: 2rem;">
+                    Choose Your Donation Method
+                </h3>
+                
+                <div class="grid grid-cols-3">
+                    <div class="card text-center animate-fade-in">
+                        <div style="width: 4rem; height: 4rem; background: rgba(var(--primary), 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 2rem;">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Bank Transfer</h4>
+                        <p style="color: var(--primary-foreground); margin-bottom: 1rem;">Direct bank transfer for secure donations</p>
+                        <div>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">MCDC-Foundation</p>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">Account No: 234567654</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card text-center animate-fade-in">
+                        <div style="width: 4rem; height: 4rem; background: rgba(var(--primary), 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 2rem;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">UPI Payment</h4>
+                        <p style="color: var(--primary-foreground); margin-bottom: 1rem;">Quick and easy mobile payments</p>
+                        <div>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">mcdc&#64;upi</p>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">Scan QR code to pay</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card text-center animate-fade-in">
+                        <div style="width: 4rem; height: 4rem; background: rgba(var(--primary), 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); font-size: 2rem;">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Online Donation</h4>
+                        <p style="color: var(--primary-foreground); margin-bottom: 1rem;">Secure online payment gateway</p>
+                        <div>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">Multiple Options</p>
+                            <p style="font-size: 0.875rem; color: var(--primary); font-weight: 500;">Credit/Debit cards accepted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Get Connected</p>
+                <h2 class="section-title">
+                    Get In <span class="text-gradient">Touch</span>
+                </h2>
+                <p class="section-description">
+                    Have questions or want to get involved? We'd love to hear from you. 
+                    Let's work together to create positive change through culture and entertainment.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Contact Information</h3>
+                    
+                    <div class="contact-info-grid">
+                        <div class="card animate-fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Address</h4>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">Maharashtra Culture & Development Center</p>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">Mumbai, Maharashtra, India</p>
+                        </div>
+                        
+                        <div class="card animate-fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Phone</h4>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">+91 98765 43210</p>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">Mon-Fri 9AM to 6PM</p>
+                        </div>
+                        
+                        <div class="card animate-fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">info&#64;mcdc.org.in</p>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">We'll respond within 24 hours</p>
+                        </div>
+                        
+                        <div class="card animate-fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Office Hours</h4>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">Monday - Friday</p>
+                            <p style="font-size: 0.875rem; color: var(--primary-foreground);">9:00 AM - 6:00 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Follow Us</h4>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Send us a Message</h3>
+                    
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">First Name</label>
+                                <input class="form-input" id="firstName" type="text" placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">Last Name</label>
+                                <input class="form-input" id="lastName" type="text" placeholder="Your last name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-input" id="email" type="email" placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="interest">I'm interested in</label>
+                            <select class="form-input" id="interest">
+                                <option value="">Select your interest</option>
+                                <option value="volunteer">Volunteer</option>
+                                <option value="donate">Donate</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="partnership">Event Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input class="form-input" id="subject" type="text" placeholder="Brief subject of your message">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-input form-textarea" id="message" placeholder="Tell us more about how we can help you..." rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

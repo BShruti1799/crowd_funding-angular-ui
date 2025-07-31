@@ -1,7 +1,7 @@
 /* Footer */
 .footer {
-    background: var(--text-primary);
-    color: white;
+    background: var(--brand-purple-dark);
+    color: var(--secondary);
     padding: 4rem 2rem;
     /* width: 95%; */
     /* margin: auto; */
@@ -47,12 +47,12 @@
 .social-link {
     width: 2.5rem;
     height: 2.5rem;
-    background: var(--primary);
+    background: var(--secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--brand-purple-dark);
     text-decoration: none;
     transition: var(--transition);
 }
