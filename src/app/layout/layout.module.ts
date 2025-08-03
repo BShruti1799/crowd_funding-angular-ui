@@ -7,14 +7,15 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { FormsModule } from '@angular/forms';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
 @NgModule({
-  declarations: [ FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent],
+  declarations: [ FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent,AboutUsComponent],
   imports: [
     CommonModule, RouterModule, RouterOutlet, FormsModule
   ],
-  exports: [FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent]
+  exports: [FooterComponent, LandingPageComponent, MainComponent, TopNavComponent, LayoutComponent,AboutUsComponent]
 })
 export class LayoutModule { }

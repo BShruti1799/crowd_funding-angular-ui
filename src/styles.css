@@ -5,62 +5,65 @@
 @import "tailwindcss";
 
 :root {
-  /* Core Brand Colors */
-  --ligh-peach: #fbdeda;
-  --brand-purple: hsl(316, 91%, 79%);
-  --brand-purple-light: hsl(312, 50%, 40%);
-  --brand-purple-dark: hsl(301, 100%, 20%);
+    /* Core Brand Colors */
+    --ligh-peach: #fbdeda;
+    --brand-purple: hsl(316, 91%, 79%);
+    --brand-purple-light: hsl(312, 50%, 40%);
+    --brand-purple-dark: hsl(301, 100%, 20%);
 
-  --brand-yellow: hsl(48, 100%, 50%);
-  --brand-yellow-dark: hsl(45, 100%, 45%);
+    --hero-gradient: linear-gradient(135deg, hsl(280, 70%, 25%) 0%, hsl(320, 60%, 35%) 50%, hsl(280, 60%, 45%) 100%);
+    --hero-overlay: hsla(280, 60%, 25%, 0.8);
 
-  /* Background Colors */
-  --background: hsl(0, 0%, 100%);
-  --background-secondary: hsl(280, 15%, 97%);
-  --foreground: hsl(222.2, 84%, 4.9%);
+    --brand-yellow: hsl(48, 100%, 50%);
+    --brand-yellow-dark: hsl(45, 100%, 45%);
 
-  /* Hero Gradient */
-  --hero-gradient: linear-gradient(135deg, hsl(280, 70%, 25%) 0%, hsl(320, 60%, 35%) 50%, hsl(280, 60%, 45%) 100%);
-  --hero-overlay: hsla(280, 60%, 25%, 0.8);
+    /* Background Colors */
+    --background: hsl(0, 0%, 100%);
+    --background-secondary: hsl(280, 15%, 97%);
+    --foreground: hsl(222.2, 84%, 4.9%);
 
-  /* Card and Surface Colors */
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222.2, 84%, 4.9%);
-  --card-shadow: hsla(280, 40%, 20%, 0.1);
+    /* Hero Gradient */
+    --hero-gradient: linear-gradient(135deg, hsl(280, 70%, 25%) 0%, hsl(320, 60%, 35%) 50%, hsl(280, 60%, 45%) 100%);
+    --hero-overlay: hsla(280, 60%, 25%, 0.8);
 
-  /* Primary Colors (Purple Theme) */
-  --primary: hsl(280, 60%, 35%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --primary-hover: hsl(280, 70%, 25%);
+    /* Card and Surface Colors */
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(222.2, 84%, 4.9%);
+    --card-shadow: hsla(280, 40%, 20%, 0.1);
 
-  /* Secondary Colors (Yellow Accent) */
-  --secondary: hsl(48, 100%, 50%);
-  --secondary-foreground: hsl(280, 60%, 25%);
-  --secondary-hover: hsl(45, 100%, 45%);
+    /* Primary Colors (Purple Theme) */
+    --primary: hsl(280, 60%, 35%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --primary-hover: hsl(280, 70%, 25%);
 
-  /* Text Colors */
-  --muted: hsl(280, 10%, 95%);
-  --muted-foreground: hsl(280, 15%, 45%);
+    /* Secondary Colors (Yellow Accent) */
+    --secondary: hsl(48, 100%, 50%);
+    --secondary-foreground: hsl(280, 60%, 25%);
+    --secondary-hover: hsl(45, 100%, 45%);
 
-  --accent: hsl(280, 15%, 96%);
-  --accent-foreground: hsl(280, 60%, 25%);
+    /* Text Colors */
+    --muted: hsl(280, 10%, 95%);
+    --muted-foreground: hsl(280, 15%, 45%);
 
-  /* Status Colors */
-  --success: hsl(142, 71%, 45%);
-  --success-foreground: hsl(0, 0%, 100%);
+    --accent: hsl(280, 15%, 96%);
+    --accent-foreground: hsl(280, 60%, 25%);
 
-  /* UI Elements */
-  --border: hsl(280, 15%, 90%);
-  --input: hsl(280, 15%, 95%);
+    /* Status Colors */
+    --success: hsl(142, 71%, 45%);
+    --success-foreground: hsl(0, 0%, 100%);
 
-  /* Animations */
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* UI Elements */
+    --border: hsl(280, 15%, 90%);
+    --input: hsl(280, 15%, 95%);
 
-  /* Shadows */
-  --shadow-elegant: 0 10px 30px -10px hsla(280, 40%, 20%, 0.3);
-  --shadow-glow: 0 0 40px hsla(280, 60%, 50%, 0.2);
-}
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsla(280, 40%, 20%, 0.3);
+    --shadow-glow: 0 0 40px hsla(280, 60%, 50%, 0.2);
+  }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -69,6 +72,9 @@
     --brand-purple: hsl(316, 91%, 79%);
     --brand-purple-light: hsl(312, 50%, 40%);
     --brand-purple-dark: hsl(301, 100%, 20%);
+
+    --hero-gradient: linear-gradient(135deg, hsl(280, 70%, 25%) 0%, hsl(320, 60%, 35%) 50%, hsl(280, 60%, 45%) 100%);
+    --hero-overlay: hsla(280, 60%, 25%, 0.8);
 
     --brand-yellow: hsl(48, 100%, 50%);
     --brand-yellow-dark: hsl(45, 100%, 45%);
