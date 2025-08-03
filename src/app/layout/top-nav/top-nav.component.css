@@ -1,77 +1,180 @@
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: var(--brand-purple-dark);
-    /* backdrop-filter: blur(10px); */
-    /* border-bottom: 1px solid var(--border); */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--brand-purple-dark);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logoImg {
+  height: 4rem;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--brand-yellow);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.nav a:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-icons a {
+  background: var(--brand-yellow);
+  color: var(--brand-purple-dark);
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.language-select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--brand-yellow);
+  color: var(--brand-purple-dark);
+  font-weight: bold;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--brand-yellow);
+  cursor: pointer;
+}
+/* Side Drawer Base */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: var(--brand-purple-dark);
+  color: var(--brand-yellow);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  transition: right 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--brand-yellow);
+  font-size: 2rem;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Reuse existing styles inside drawer */
+.mobile-drawer .nav,
+.mobile-drawer .nav-buttons,
+.mobile-drawer .nav-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-drawer .nav a,
+.mobile-drawer .btn,
+.mobile-drawer .language-select {
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--brand-yellow);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
   }
 
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 4rem;
+  .nav,
+  .nav-buttons,
+  .nav-icons {
+    display: none;
   }
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .logoImg {
-    height: 5rem;
-    width: 6rem
-  }
-
-  .logo-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--brand-purple), var(--brand-purple-light));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--brand-yellow);
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .nav a {
-    color: var(--brand-yellow);
-    text-decoration: none;
-    transition: var(--transition-smooth);
-  }
-
-  .nav a:hover {
-    color: white;
-  }
-
-  .nav-buttons {
-    display: flex;
-    align-items: center;
+@media (max-width: 768px) {
+  .nav,
+  .nav-buttons,
+  .nav-icons {
+    display: none;
+    flex-direction: column;
     gap: 1rem;
   }
 
   .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: block;
   }
+.header-content
+{
+  display: flex;
+  flex-direction: row;
+}
+  .header-content.active .nav,
+  .header-content.active .nav-buttons,
+  .header-content.active .nav-icons {
+    display: flex;
+
+  }
+}

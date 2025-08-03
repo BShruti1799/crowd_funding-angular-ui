@@ -17,6 +17,27 @@
      height: 4rem;
  }
 
+ .cta-pts-title {
+     color: white;
+     margin-bottom: 0.75rem;
+     font-size: 1.25rem;
+     font-weight: 600;
+ }
+
+ .donationTitle {
+     font-size: 1.5rem;
+     font-weight: bold;
+     text-align: center;
+     margin-bottom: 2rem;
+     color: var(--brand-yellow-dark)
+ }
+
+ .cta-pts-desc {
+     color: rgba(255, 255, 255, 0.8);
+     font-size: 0.875rem;
+     font-weight: bold;
+ }
+
  .logo {
      display: flex;
      align-items: center;
@@ -80,7 +101,7 @@
      align-items: center;
      justify-content: center;
      overflow: hidden;
-     background-image: url('https://images.unsplash.com/photo-1517022812141-23620dba5c23');
+     background-image: url('/assets/MCDC.png');
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
@@ -106,13 +127,14 @@
      font-weight: 900;
      line-height: 1.1;
      margin-bottom: 1.5rem;
+     margin-top: 5%;
  }
 
  .hero-description {
      font-size: 1.25rem;
      margin-bottom: 2rem;
-     max-width: 60rem;
      opacity: 0.9;
+     width: 100%;
  }
 
  .hero-buttons {
@@ -156,6 +178,7 @@
      font-size: 3rem;
      font-weight: bold;
      margin-bottom: 1.5rem;
+     color: var(--brand-purple-dark);
  }
 
  .section-description {
@@ -213,14 +236,15 @@
      align-items: center;
      justify-content: center;
      margin-bottom: 1rem;
-     color: var(--primary);
+     color: var(--ligh-peach);
      font-size: 1.5rem;
+
  }
 
  .card-number {
      font-size: 3rem;
      font-weight: bold;
-     color: var(--primary);
+     /* color: var(--primary); */
      margin-bottom: 0.5rem;
  }
 
@@ -232,6 +256,7 @@
 
  .card-description {
      color: var(--primary-foreground);
+     font-weight: bold;
  }
 
  /* Stats Section */
@@ -387,7 +412,7 @@
  }
 
  .featured-card {
-     background: var(--brand-yellow);
+     background: var(--ligh-peach);
      border-radius: 0.75rem;
      overflow: hidden;
      box-shadow: var(--shadow-elegant);
@@ -452,6 +477,8 @@
      padding: 2rem;
      box-shadow: var(--shadow-elegant);
      transition: var(--transition-smooth);
+     color: var(--brand-purple-dark);
+     font-weight: bold;
  }
 
  .testimonial-card:hover {
@@ -751,6 +778,11 @@
          display: none;
      }
 
+     .contact-grid {
+         grid-template-columns: 1fr;
+         gap: 1.5rem;
+     }
+
      .nav-buttons {
          display: none;
      }
@@ -760,7 +792,8 @@
      }
 
      .hero-title {
-         font-size: 2.5rem;
+         font-size: 2rem;
+          margin-top: 5%;
      }
 
      .section-title {
@@ -780,7 +813,8 @@
 
  @media screen and (min-width: 481px) and (max-width: 768px) {
      .hero-title {
-         font-size: 3.5rem;
+         font-size: 2rem;
+          margin-top: 5%;
      }
 
      .stats-grid {
@@ -812,6 +846,7 @@
      .hero-title {
          font-size: 2.5rem;
          line-height: 1.2;
+         margin-top: 7rem;
      }
 
      .container {
